@@ -41,18 +41,34 @@ nato['Z'] = 'ZULU'
 
 
 def game_guess_word():
-    first_input = input('Deine Eingabe: ')
+    user_input = ''
     while user_input != 'exit':
         suggestion = random.choice(list(nato.keys()))
         print('Welcher Name gehört zu: ', suggestion)
         user_input = input('Deine Eingabe: ')
-        # user_input
         if user_input == nato[suggestion]:
             print('Richtig! :)\n')
         else:
-            print('### Falsch! :( ###')
+            print('#### Falsch! :( ####')
             print('Korrekt wäre: {}\n'.format(nato[suggestion]))
-        print("Zum Beenden 'exit' eintippen.\n")
+        print("[Zum Beenden 'exit' eintippen.]\n")
 
 
-game_guess_word()
+# game_guess_word()
+
+
+import kivy
+kivy.require('1.0.6')  # replace with your current kivy version !
+
+from kivy.app import App
+from kivy.uix.label import Label
+
+
+class MyApp(App):
+
+    def build(self):
+        return Label(text='Hello world')
+
+
+if __name__ == '__main__':
+    MyApp().run()
