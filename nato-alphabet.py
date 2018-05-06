@@ -4,9 +4,7 @@ Date: Mai 2018
 """
 
 # NATO alphabet
-
-
-# source: http://www.die-marine.de/_deutsch/sonstiges/alpha_e.html
+# source NATO alphabet: http://www.die-marine.de/_deutsch/sonstiges/alpha_e.html
 
 import random
 
@@ -37,7 +35,6 @@ nato['W'] = 'WHISKEY'
 nato['X'] = 'XRAY'
 nato['Y'] = 'YANKEE'
 nato['Z'] = 'ZULU'
-# nato[''] = ''
 
 
 def game_guess_word():
@@ -54,21 +51,4 @@ def game_guess_word():
         print("[Zum Beenden 'exit' eintippen.]\n")
 
 
-# game_guess_word()
-
-
-import kivy
-kivy.require('1.0.6')  # replace with your current kivy version !
-
-from kivy.app import App
-from kivy.uix.label import Label
-
-
-class MyApp(App):
-
-    def build(self):
-        return Label(text='Hello world')
-
-
-if __name__ == '__main__':
-    MyApp().run()
+game_guess_word()
